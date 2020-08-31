@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Goals
+{% endblock %}
+
+{% block main %}
+<div class="central">
+    <h1 class="app-title">focus</h1>
+    <p>Set your focus for the day</p>
+    <form action="/focus" method="post">
+        <div class="form-group">
+            <input id="focus" autocomplete="off" autofocus class="form-control" name="focus" placeholder="Focus" type="text">
+        </div>
+        <button id="submit" class="btn btn-light" type="submit">Submit Focus</button>
+    </form>
+</div>
+{% endblock %}

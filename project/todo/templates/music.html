@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Hub
+{% endblock %}
+
+{% block main %}
+
+<div>
+    <h1 class="app-title" style="margin-top: -550px;">music</h1>
+</div>
+
+<div>
+    <p>
+        <iframe id="piano" class="playlists" src="https://open.spotify.com/embed/playlist/4I3sSILyjrueIFDSDQUVgl" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </p>
+    <p>
+        <iframe id="holiday" class="playlists" src="https://open.spotify.com/embed/playlist/3CrpI2KIwjdzAkFJVgsRNM" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </p>
+    <p>
+        <iframe id="sad" class="playlists" src="https://open.spotify.com/embed/playlist/6vbetH32Fk2oRjeznWkKtx" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </p>
+    <p>
+        <iframe id="upbeat" class="playlists" src="https://open.spotify.com/embed/playlist/0mmqC3RIi8h7nApdD9gV7x" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </p>
+</div>
+    <div id="logo" class="centralspotifylogo">
+        <button onclick="showTable()"><img src="static/spotify.png" alt="music logo" width="250"></button>
+    </div>
+    <div class="centralspotify" id="table" style="display: none;">
+        <table>
+          <tr>
+              <td><button class="btn btn-light" onclick="showPiano()">Piano</button></td>
+              <td><button class="btn btn-light" onclick="showHoliday()">Holiday</button></td>
+              <td><button class="btn btn-light" onclick="showSad()">Sad Vibes</button></td>
+              <td><button class="btn btn-light" onclick="showUpbeat()">Upbeat</button></td>
+          </tr>
+        </table>
+    </div>
+</div>
+<script>
+function showPiano() {
+  var x = document.getElementById("piano");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("holiday");
+  y.style.display = "none";
+  var z = document.getElementById("sad");
+  z.style.display = "none";
+  var w = document.getElementById("upbeat");
+  w.style.display = "none";
+}
+
+function showHoliday() {
+  var x = document.getElementById("holiday");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("piano");
+  y.style.display = "none";
+  var z = document.getElementById("sad");
+  z.style.display = "none";
+  var w = document.getElementById("upbeat");
+  w.style.display = "none";
+}
+
+function showSad() {
+  var x = document.getElementById("sad");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("piano");
+  y.style.display = "none";
+  var z = document.getElementById("holiday");
+  z.style.display = "none";
+  var w = document.getElementById("upbeat");
+  w.style.display = "none";
+}
+
+function showUpbeat() {
+  var x = document.getElementById("upbeat");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("piano");
+  y.style.display = "none";
+  var z = document.getElementById("holiday");
+  z.style.display = "none";
+  var w = document.getElementById("sad");
+  w.style.display = "none";
+}
+
+function showTable() {
+  var x = document.getElementById("table");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+{% endblock %}

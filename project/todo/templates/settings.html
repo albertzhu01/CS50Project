@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+<div class="central">
+    <h1 class="app-title">settings</h1>
+<form action="/settings" method="post">
+  <h4>Select snow option:</h4>
+  <div style="margin: 5px">
+      <input type="radio" name="snow" value="snow" checked> Snow in home<br>
+      <input type="radio" name="snow" value="no snow"> No snow in home<br>
+  </div>
+    <button class="btn btn-light" type="submit">Update settings</button>
+</form>
+
+<p>{{ message }}</p>
+    <h4>Select avatar:</h4>
+<form action="/settings" method="post">
+    <select class="form-control" name="profile" action="/settings" method="post">
+        <option disabled selected value>Avatar</option>
+
+        <option value="crest">Harvard Crest</option>
+        <option value="david">David Malan</option>
+        <option value="tree">Tree</option>
+    </select>
+
+    <button class="btn btn-light" style="margin: 5px" type="submit">Update settings</button>
+</form>
+<p>{{ message }}</p>
+
+</div>
+{% endblock %}

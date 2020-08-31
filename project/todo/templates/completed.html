@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reflection
+{% endblock %}
+
+{% block main %}
+<div style="z-index: 3;
+    left: 0;
+    margin-top: -300px;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    width: 100%;">
+    <h1 class="app-title" style="text-shadow: 4px 4px 4px white">reflect</h1>
+    <form action="/completed" method="post" id="usrform">
+        <div style="visibility: hidden; display: none;">
+            <input value="{{ complete_id }}" autofocus class="form-control" name="todo" placeholder="id" type="text">
+        </div>
+        <h4 style="font-style: italic; color: #E5F2FF; text-shadow: 2px 2px 4px black">TODO: {{ todo_name }}</h4>
+
+        <p>How much time did you spend on this todo?</p>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="time" placeholder="Time spent (minutes)" type="text">
+        </div>
+
+        </select>On a scale of 1 to 10, how well do you feel this task went?
+        <div class="form-group">
+            <input type="number" name="quantity" min="1" max="10">
+        </div>
+        <textarea rows="3" cols="25" name="comment" form="usrform" placeholder="Any other comments you would like to make..."></textarea>
+
+    <div class="padding">
+        <button class="btn btn-light" type="submit">Submit</button>
+    </div>
+    </form>
+</div>
+{% endblock %}

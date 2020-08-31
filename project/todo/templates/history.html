@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Done
+{% endblock %}
+
+
+{% block main %}
+<div class="top">
+    <h1 class="app-title">completed todos</h1>
+</div>
+    <div>
+    <table class="table table-stripped" style="margin-top: -450px">
+        <thead>
+            <th>Date Completed</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Rating</th>
+            <th>Reflection</th>
+            <th>Time Spent</th>
+        </thead>
+        <tfoot>
+            <tr style="font-weight: bold;">
+                <td># of todos completed</td>
+                <td>{{ num }}</td>
+                <td colspan="4"></td>
+                <td>{{ time }} minutes</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row.endtime }}</td>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.category }}</td>
+                    <td>{{ row.reflect }}</td>
+                    <td>{{ row.comments }}</td>
+                    <td>{{ row.timespent }} minutes</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<div style="z-index: 4">
+    <form action="/history" method="post" name="delete" class="centralspotify" style="margin-top: 100px">
+        <div class="form-group">
+            <select class="form-control" name="delete" action="/history" method="post">
+                <option disabled selected value>Task</option>
+                {% for i in range(names | length) %}
+                <option value="{{ ids[i] }}">{{ names[i] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button name="delete" class="btn btn-light" type="submit" style="margin:0 auto; display:block;">Delete</button>
+    </form>
+</div>
+    </div>
+
+{% endblock %}

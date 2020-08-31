@@ -1,0 +1,307 @@
+/*.center*/
+/*{*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*    font-size: 18px;*/
+
+/*}*/
+html {
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.whitebackground
+{
+    display: table; /* keep the background color wrapped tight */
+    margin: 0px auto 0px auto; /* keep the table centered */
+    padding:4px;font-size:20px;background-color:white;color:black;
+    opacity: 0.5;
+}
+
+.centralregisterlogin
+{
+    left: 0;
+    margin-top: -400px;
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    width: 100%;
+}
+
+.central
+{
+    left: 0;
+    margin-top: -400px;
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    width: 100%;
+}
+
+.center
+{
+    margin: auto;
+    margin-top: -450px;
+    width: 40%;
+    z-index: 4;
+}
+
+table
+{
+    background-color: rgba(222, 223, 224, 0.6);
+    z-index: 2;
+    border-collapse: collapse;
+    position: relative;
+    margin-top: -500px;
+    padding-top: 20px;
+    border: 10px;
+    padding: 10px;
+
+}
+.form-control {
+    display: inline-block;
+}
+h5
+{
+    margin: 10px;
+}
+.padding
+{
+    padding: 10px;
+}
+.centraltop
+{
+    z-index: 3;
+    left: 0;
+    margin-top: -300px;
+    position: absolute;
+    text-align: right;
+    padding: 10px;
+    top: 50%;
+    width: 100%;
+}
+
+.centralspotifylogo
+{
+    z-index: 3;
+    right: 0;
+    margin-top: -180px;
+    left: 125px;
+    position: absolute;
+    text-align: left;
+    padding: 0px;
+    top: 50%;
+    width: 100%;
+}
+
+.centrallist
+{
+    left: 0;
+    margin-left: 300px;
+    margin-top: -300px;
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    width: 100%;
+}
+
+.centralbottom
+{
+    z-index: 3;
+    left: 0;
+    margin-top: 100px;
+    position: absolute;
+    text-align: right;
+    padding: 10px;
+    top: 50%;
+    width: 100%;
+}
+
+.centrallogo
+{
+    left: 0;
+    margin-top: -400px;
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    width: 100%;
+}
+
+.centralhub
+{
+    left: 0;
+    margin-top: -250;
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    width: 100%;
+}
+.calendar
+{
+    margin-top: -200px;
+    position: absolute;
+    text-align: right;
+    top: 70%;
+    right: 60%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.left
+{
+    left: 0;
+    margin-top: -300px;
+    position: absolute;
+    text-align: left;
+    top: 70%;
+    width: 100%;
+    z-index: 1;
+}
+
+.centralspotify
+{
+    z-index: 3;
+    left: 53px;
+    margin-top: 430px;
+    position: absolute;
+    text-align: right;
+    padding: 10px;
+    top: 50%;
+    width: 100%;
+
+}
+
+.centralcalendar {
+    top: -200px;
+    left: -10px;
+    float: right;
+    position: relative;
+    margin: 5px;
+}
+
+.weektable {
+    left: 10px;
+    margin-top: -600px;
+    position: relative;
+    text-align: center;
+    top: 30%;
+    width: 50%;
+    margin: 5px;
+}
+
+.top
+{
+    position: absolute;
+    top: 0%;
+    vertical-align: top;
+}
+
+body, html {
+  font-family: "Lato", sans-serif;
+  height: 100%;
+  margin: 0;
+  color: #3D3B3B;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/*why is this not working?? i want settings/contact to be at the bottom of nav bar*/
+.bottom
+{
+  vertical-align: bottom;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.bg {
+  /* The image used */
+  background-image: url("mountain2.jpg");
+
+  /* Full height */
+  height: 100%;
+  margin-bottom: -140px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.50;
+  z-index: -1;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+.app-title {
+  z-index: 2;
+  color: #3D3B3B;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 80px;
+  opacity: 0.7;
+}
+
+.form-control {
+    min-width: 0;
+    width: 300px !important;
+    color:red;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.playlists {
+    display: none;
+    border-width:0;
+    width: 600px;
+    margin: auto;
+    margin-top: 0;
+    margin-left: 200px;
+    position: absolute;
+}

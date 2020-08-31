@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    todos
+{% endblock %}
+
+{% block style %}
+<style>
+.hi
+{
+    left: 0;
+    margin-top: -50;
+    position: absolute;
+    text-align: left;
+    top: 30%;
+    padding: 10px;
+}
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="top">
+    <h1 class="app-title">todo list</h1>
+</div>
+<div class="centrallist">
+    <form action="/list" method="post" class="centercalendar">
+        <div class="form-group">
+            <select class="form-control" name="complete" action="/list" method="post">
+                <option disabled selected value>Task</option>
+                {% for i in range(names | length) %}
+                <option value="{{ ids[i] }}">{{ names[i] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button name="complete" class="btn btn-light" type="submit" style="margin: 10px;">Mark as completed</button>
+    </form>
+
+    <form action="/list" method="post" name="edit" class="centercalendar">
+        <div class="form-group">
+            <select class="form-control" name="edit" action="/list" method="post">
+                <option disabled selected value>Task</option>
+                {% for i in range(names | length) %}
+                <option value="{{ ids[i] }}">{{ names[i] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button name="edit" class="btn btn-light" type="submit" style="margin: 10px;">Edit</button>
+    </form>
+
+    <form action="/list" method="post" name="delete" class="centercalendar">
+        <div class="form-group">
+            <select class="form-control" name="delete" action="/list" method="post">
+                <option disabled selected value>Task</option>
+                {% for i in range(names | length) %}
+                <option value="{{ ids[i] }}">{{ names[i] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button name="delete" class="btn btn-light" type="submit" style="margin: 10px;">Delete</button>
+    </form>
+</div>
+
+<table class="table table-striped" style="z-index: 3; width: 450px;">
+<thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Date Entered</th>
+        <th scope="col">Category</th>
+    </tr>
+</thead>
+<tbody>
+    {% for i in range(names|length) %}
+
+    <tr style= "background-color: {{ priority[i] }}">
+        <td>{{ names[i] }}</td>
+        <td>{{ addtimes[i] }}</td>
+        <td>{{ categories[i] }}</td>
+        <td>
+
+        </td>
+    </tr>
+    {% endfor %}
+
+</tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <!--<div class="central">-->
+    <!--    <h1>Register</h1>-->
+    <!--    <p>-->
+    <!--        Register with a username and password below.-->
+    <!--    </p>-->
+    <!--    <p>-->
+    <!--        Your password must be at least 8 characters long and contain at least 1 letter and 1 digit-->
+    <!--    </p>-->
+    <!--</div>-->
+
+    <div class="centralregisterlogin">
+        <form action="/register" method="post">
+            <h1 class="app-title">register</h1>
+            <p>
+                Register with a username, password, and your name below.
+            </p>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="name" placeholder="name" type="name">
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="username" type="name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="password" type="password">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="confirmation" placeholder="password confirmation" type="password">
+                <p>
+                Your password must be at least 8 characters long and contain at least 1 letter and 1 digit
+                </p>
+            </div>
+            <button class="btn btn-light" type="submit">Register</button>
+        </form>
+    </div>
+
+{% endblock %}

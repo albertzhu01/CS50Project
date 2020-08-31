@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Study Group
+{% endblock %}
+
+{% block main %}
+<div class="central">
+    <h1 class="app-title">study group</h1>
+
+</div>
+<table style="margin: auto; margin-top: -400px;">
+  <tr>
+      <td><button class="btn btn-light" onclick="window.location.href = '/groupmake';">Make Group</button></td>
+      <td><button class="btn btn-light" onclick="window.location.href = '/groupjoin';">Join Group</button></td>
+      <td><button class="btn btn-light" onclick="window.location.href = '/groups';">View Group</button></td>
+  </tr>
+</table>
+{% endblock %}

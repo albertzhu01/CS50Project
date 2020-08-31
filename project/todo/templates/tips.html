@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips
+{% endblock %}
+
+{% block main %}
+<div class="central">
+    <h1 class="app-title">tips</h1>
+    <select type="text" id="dropBox" onchange="changeSelect()">
+        <option value="default" disabled selected value> Select </option>
+        <option value="1">Goal Setting</option>
+        <option value="2">Timing and Time Management</option>
+        <option value="3">Managing Your Schedule</option>
+        <option value="4">Completing To-Do's</option>
+        <option value="5">Sleep</option>
+    </select>
+<div id="divText">Please select a tip</div>
+
+
+</div>
+
+        <script>
+            function changeSelect() {
+    if (document.getElementById("dropBox").value == "1") {
+        document.getElementById("divText").innerHTML = "Setting short-term goals can be beneficial for reaching your long-term goals";
+    } else if (document.getElementById("dropBox").value == "2") {
+        document.getElementById("divText").innerHTML = "For tasks that require lots of time, consider taking short breaks while working";
+    } else if (document.getElementById("dropBox").value == "3") {
+        document.getElementById("divText").innerHTML = "Always plan to leave time in between events so that you can adapt to unexpected changes in your schedule";
+    } else if (document.getElementById("dropBox").value == "4") {
+        document.getElementById("divText").innerHTML = "If you find yourself completing less tasks than you expect to complete, consider lessening your workload";
+    } else if (document.getElementById("dropBox").value == "5") {
+        document.getElementById("divText").innerHTML = "Getting 8 hours of sleep per day can greatly enhance your focus and efficiency while working";
+    }
+}
+        </script>
+{% endblock %}

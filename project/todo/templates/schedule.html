@@ -1,0 +1,302 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Schedule
+{% endblock %}
+
+
+
+{% block main %}
+<script>
+function showAdd() {
+  var x = document.getElementById("events");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<div class="centraltop">
+    <h5>
+<button class="btn btn-light" onclick="showAdd()">+</button>
+    Add event</h5>
+
+<div class="float-right">
+    <div id="events" style="display: none;">
+        <form action="/schedule" method="post">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="event" placeholder="Event" type="text">
+            </div>
+        </form>
+
+    <select class="form-control" name="starttime" action="/schedule" method="post">
+                    <option disabled selected value>Start Time</option>
+
+                    <option value="9">9:00 AM</option>
+                    <option value="10">10:00 AM</option>
+                    <option value="11">11:00 AM</option>
+                    <option value="12">12:00 PM</option>
+                    <option value="13">1:00 PM</option>
+                    <option value="14">2:00 PM</option>
+                    <option value="15">3:00 PM</option>
+                    <option value="16">4:00 PM</option>
+                    <option value="17">5:00 PM</option>
+                    <option value="18">6:00 PM</option>
+                    <option value="19">7:00 PM</option>
+                    <option value="20">8:00 PM</option>
+                    <option value="21">9:00 PM</option>
+                    <option value="22">10:00 PM</option>
+                    <option value="23">11:00 PM</option>
+
+            </select>
+            <select class="form-control" name="endtime" action="/schedule" method="post">
+                    <option disabled selected value>End Time</option>
+
+                    <option value="9">9:00 AM</option>
+                    <option value="10">10:00 AM</option>
+                    <option value="11">11:00 AM</option>
+                    <option value="12">12:00 PM</option>
+                    <option value="13">1:00 PM</option>
+                    <option value="14">2:00 PM</option>
+                    <option value="15">3:00 PM</option>
+                    <option value="16">4:00 PM</option>
+                    <option value="17">5:00 PM</option>
+                    <option value="18">6:00 PM</option>
+                    <option value="19">7:00 PM</option>
+                    <option value="20">8:00 PM</option>
+                    <option value="21">9:00 PM</option>
+                    <option value="22">10:00 PM</option>
+                    <option value="23">11:00 PM</option>
+
+            </select>
+
+            <select class="form-control" name="day" action="/schedule" method="post">
+                    <option disabled selected value>Day</option>
+
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+
+            </select>
+
+    <!--<input type="checkbox" name="monday" value="Monday">Mon</input>-->
+    <!--<input type="checkbox" name="tuesday" value="Tuesday">Tue</input>-->
+    <!--<input type="checkbox" name="wednesday" value="Wednesday">Wed</input>-->
+    <!--<input type="checkbox" name="thursday" value="Thursday">Thu</input>-->
+    <!--<input type="checkbox" name="friday" value="Friday">Fri</input>-->
+    <!--<input type="checkbox" name="saturday" value="Saturday">Sat</input>-->
+    <!--<input type="checkbox" name="sunday" value="Sunday">Sun</input>-->
+
+    <div>
+        <div class="padding">
+            <button class="btn btn-light" type="submit">Submit</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th width="5%">Sunday</th>
+            <th width="5%">Monday</th>
+            <th width="5%">Tuesday</th>
+            <th width="5%">Wednesday</th>
+            <th width="5%">Thursday</th>
+            <th width="5%">Friday</th>
+            <th width="10px">Saturday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="5%">9:00am</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>10:00am</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>11:00am</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>12:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>1:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>2:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>3:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+
+
+
+        </tr>
+        <tr>
+            <td>4:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>5:00pm</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>6:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>8:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>10:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>11:00pm</td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}

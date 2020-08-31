@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Study Group
+{% endblock %}
+
+
+{% block main %}
+{% if groupname %}
+<div class="top">
+    <h1 class="app-title">groups</h1>
+    <div style="background-color: rgba(229, 242, 255, .5); padding: 5px;">
+        <h3>Group: </h3>
+        <h4>{{ groupname }}</h4>
+    </div>
+</div>
+
+    <div class="center">
+    <table class="table table-stripped">
+        <thead>
+            <th>User</th>
+            <th>Todos Completed</th>
+            <th>Time Spent</th>
+        </thead>
+        <tbody>
+            {% for i in range(usernames | length) %}
+                <tr>
+                    <td>{{ usernames[i] }}</td>
+                    <td>{{ todos[i] }}</td>
+                    <td>{{ time[i] }} minutes</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+<div class="calendarcentral">
+    <iframe src="https://deadsimplechat.com/2EpCFUAH_S" style="width: 100%; height: 500px;">
+</div>
+    {% else %}
+<div class="top">
+    <h1 class="app-title">groups</h1>
+    <div style="background-color: rgba(229, 242, 255, .5); padding: 5px; margin: 10px; border: 10px;">
+        <h4>You have not joined a group yet!</h4>
+              <td><button class="btn btn-light" onclick="window.location.href = '/groupmake';">Make Group</button></td>
+              <td><button class="btn btn-light" onclick="window.location.href = '/groupjoin';">Join Group</button></td>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

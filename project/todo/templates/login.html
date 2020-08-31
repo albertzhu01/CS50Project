@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+<div class="centralregisterlogin">
+    <form action="/login" method="post">
+        <h1 class="app-title">Login</h1>
+        <p>
+            Enter username and password below.
+        </p>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="password" type="password" id="typepass">
+        </div>
+        <div>
+            <script>
+                function Toggle() {
+                    var temp = document.getElementById("typepass");
+                    if (temp.type === "password") {
+                        temp.type = "text";
+                    }
+                    else {
+                        temp.type = "password";
+                    }
+                }
+            </script>
+            <input type="checkbox" onclick="Toggle()">Show Password
+        </div>
+        <button class="btn btn-light" type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}

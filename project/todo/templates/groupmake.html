@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    todos
+{% endblock %}
+
+
+
+{% block main %}
+
+<div style="
+    z-index: 3;
+    left: 0;
+    margin-top: -300px;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    width: 100%;">
+    <div>
+        <h1 class="app-title">make study group</h1>
+    </div>
+    <form action="/groupmake" method="post">
+            <p>
+                Register with your group name and pin below.
+            </p>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="groupname" placeholder="group name" type="name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="pin" placeholder="pin" type="password">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="confirmation" placeholder="pin confirmation" type="password">
+            </div>
+            <button class="btn btn-light" type="submit">register group</button>
+    </form>
+</div>
+{% endblock %}
